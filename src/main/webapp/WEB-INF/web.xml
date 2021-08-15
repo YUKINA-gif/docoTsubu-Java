@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.5">
   <display-name>docoTsubu</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -58,5 +58,35 @@
   <servlet-mapping>
     <servlet-name>LoginLogic</servlet-name>
     <url-pattern>/LoginLogic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Main</display-name>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>jp.doco.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/Main</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TweetLogic</display-name>
+    <servlet-name>TweetLogic</servlet-name>
+    <servlet-class>model.TweetLogic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TweetLogic</servlet-name>
+    <url-pattern>/TweetLogic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PostTweetLogic</display-name>
+    <servlet-name>PostTweetLogic</servlet-name>
+    <servlet-class>model.PostTweetLogic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostTweetLogic</servlet-name>
+    <url-pattern>/PostTweetLogic</url-pattern>
   </servlet-mapping>
 </web-app>
