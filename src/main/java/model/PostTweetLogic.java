@@ -1,9 +1,10 @@
 package model;
 
-import java.util.List;
+import dao.TweetDAO;
 
 public class PostTweetLogic {
-	public void execute(Tweet tweet, List<Tweet> tweetList) {
-		tweetList.add(0,tweet);
+	public void execute(Tweet tweet) {
+		TweetDAO dao = new TweetDAO();
+		dao.create(tweet);
 	}
 }

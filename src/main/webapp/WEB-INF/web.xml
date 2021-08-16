@@ -99,4 +99,24 @@
     <servlet-name>GetTweetListLogic</servlet-name>
     <url-pattern>/GetTweetListLogic</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TweetDAO</display-name>
+    <servlet-name>TweetDAO</servlet-name>
+    <servlet-class>dao.TweetDAO</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TweetDAO</servlet-name>
+    <url-pattern>/TweetDAO</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetTweetLogic</display-name>
+    <servlet-name>GetTweetLogic</servlet-name>
+    <servlet-class>model.GetTweetLogic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetTweetLogic</servlet-name>
+    <url-pattern>/GetTweetLogic</url-pattern>
+  </servlet-mapping>
 </web-app>
