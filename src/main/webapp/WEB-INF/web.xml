@@ -89,4 +89,14 @@
     <servlet-name>PostTweetLogic</servlet-name>
     <url-pattern>/PostTweetLogic</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetTweetListLogic</display-name>
+    <servlet-name>GetTweetListLogic</servlet-name>
+    <servlet-class>model.GetTweetListLogic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetTweetListLogic</servlet-name>
+    <url-pattern>/GetTweetListLogic</url-pattern>
+  </servlet-mapping>
 </web-app>

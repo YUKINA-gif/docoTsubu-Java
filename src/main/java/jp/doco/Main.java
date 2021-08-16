@@ -3,8 +3,7 @@ package jp.doco;
 import java.io.IOException;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import model.User;
 import model.Tweet;
 import model.PostTweetLogic;
@@ -14,7 +13,7 @@ public class Main extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     public Main() {
-        // TODO Auto-generated constructor stub
+        super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -60,12 +59,12 @@ public class Main extends HttpServlet {
 			postTweetLogic.execute(tweet,tweetList);
 			
 			application.setAttribute("tweetList", tweetList);
-			
+		} else {
+			request.setAttribute("errorMsg", "つぶやきが入力されていません");
+		}
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/tweet.jsp");
 			dispatcher.forward(request, response);
-		} else {
-			System.out.println("ツイートはありません");
-		}
+		
 	}
 
 }

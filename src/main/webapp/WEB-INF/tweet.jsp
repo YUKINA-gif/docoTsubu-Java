@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="model.User" %>
 <%@ page import="model.User,model.Tweet,java.util.List" %>
 <% 
 	User loginUser = (User) session.getAttribute("loginUser"); 
-	List<Tweet> tweetList = (List<Tweet>) application.getAttribute("tweetList");
+	List<Tweet> tweetList = (List<Tweet>)application.getAttribute("tweetList");
+	String errorMsg = (String)request.getAttribute("errorMsg");
 %>
 <!DOCTYPE html>
 <html>
@@ -22,6 +22,9 @@
 		<input type="text" name="text">
 		<input type="submit" value="つぶやく">
 	</form>
+	<% if(errorMsg != null) { %>
+	<p><%= errorMsg %></p>
+	<% } %>
 	<% for(Tweet tweet : tweetList) { %>
 	<p><%= tweet.getUserName() %>:<%= tweet.getText() %></p>
 	<% } %>
